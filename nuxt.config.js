@@ -48,5 +48,7 @@ export default {
       // console.log('webpack', config, isServer, isClient)
     },
   },
-  target: 'server',
+  target: {
+    port: process.env.NODE_ENV === 'production' ? null : 5000,
+  },
 }
